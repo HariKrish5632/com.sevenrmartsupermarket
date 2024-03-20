@@ -31,8 +31,8 @@ public class DeliveryBoyTest extends Base {
 		System.out.println(GeneralUtility.getRandomFirstName());
 
 		excel.setExcelFile("DeliveryBoy", "AddDetails");
-		deliveryboypage.addNewDeliveryBoy(GeneralUtility.getRandomFirstName(), "veena@example.com", "10023",
-				"veena Kochi", "Veena5632", "Veena5632");
+		deliveryboypage.addNewDeliveryBoy(GeneralUtility.getRandomFirstName(), "harisoumya@example.com", "10023",
+				"Hari Kochi", "Hari5632", "Hari5632");
 
 		/*
 		 * deliveryboypage.addNewDeliveryBoy("Veena", "veena@example.com", "10023",

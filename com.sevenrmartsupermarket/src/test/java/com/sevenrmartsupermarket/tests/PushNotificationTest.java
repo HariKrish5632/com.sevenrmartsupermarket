@@ -53,4 +53,25 @@ public class PushNotificationTest extends Base {
 
 	}
 
+	@Test
+
+	public void printExcelData1() {
+
+		loginpage = new LoginPage(driver);
+		homepage = new HomePage(driver);
+		pushNotificationPage = new PushNotificationPage(driver);
+
+		loginpage.login("admin", "admin");
+
+		excel.setExcelFile("GroceryFile", "Notification Data");
+
+		pushNotificationPage.sendNotifications(excel.getCellData(1, 0), excel.getCellData(1, 1));
+		/*
+		 * boolean exp_successmsg = true; boolean act_successmsg =
+		 * pushNotificationPage.visibilityOfSuccessMessageBox();
+		 * Assert.assertEquals(act_successmsg, exp_successmsg);
+		 */
+
+	}
+
 }
