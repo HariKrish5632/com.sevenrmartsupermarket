@@ -42,6 +42,8 @@ public class PushNotificationTest extends Base {
 		excel.setExcelFile("GroceryFile", "Notification Data");
 		System.out.println(excel.getCellData(1, 0));
 		System.out.println(excel.getCellData(1, 1));
+		System.out.println(excel.getCellData(0, 1));
+		System.out.println(excel.getCellData(0, 0));
 		pushNotificationPage.sendNotifications(excel.getCellData(1, 0), excel.getCellData(1, 1));
 		/*
 		 * boolean exp_successmsg = true; boolean act_successmsg =

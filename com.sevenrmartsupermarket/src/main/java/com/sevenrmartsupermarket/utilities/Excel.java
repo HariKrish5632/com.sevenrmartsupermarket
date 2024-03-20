@@ -38,19 +38,37 @@ public class Excel {
 
 		switch (cell.getCellType()) {
 		case STRING: {
-			String data;
+			String data;// Returnd the string value directly
 			data = cell.getStringCellValue();
 			return data;
 		}
 		case NUMERIC: {
-			long d = (long) cell.getNumericCellValue();
+			long d = (long) cell.getNumericCellValue();// converts the numeric value to a string (assuming the numeric
+														// value represent
 			return String.valueOf(d);
 		}
 
 		default:
-			return null;
+			return null;// if the cell contains data types other than string or numeric, or if the cell
+						// is empty it return null
 
 		}
 
+	}
+
+	public int getRowCount() {
+		return 0;
+	}
+
+	public Object[][] getMultidimentionalData(int row, int column) {
+
+		Object data[][] = new Object[row][column];
+
+		for (int i = 0; i < row; i++) {
+			for (int j = 0; j < column; j++) {
+				data[i][j] = getCellData(i, j);
+			}
+		}
+		return data;
 	}
 }
